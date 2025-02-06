@@ -21,6 +21,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer install
 
+RUN npm run dev
+
 RUN mkdir -p /var/www/html/database && \
     touch /var/www/html/database/database.sqlite && \
     chown -R www-data:www-data /var/www/html/database
