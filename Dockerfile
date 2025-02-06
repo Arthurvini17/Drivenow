@@ -27,4 +27,4 @@ RUN mkdir -p /var/www/html/database && \
 
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# RUN php artisan migrate --force
+RUN php artisan migrate --force
