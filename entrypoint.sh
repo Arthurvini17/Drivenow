@@ -10,6 +10,6 @@ then
 
     echo "rodando migrate"
     php artisan migrate --force
-
-    echo "iniciando o apache 
-    apache2-foreground
+    
+echo "iniciando o apache"
+apache2-foreground
