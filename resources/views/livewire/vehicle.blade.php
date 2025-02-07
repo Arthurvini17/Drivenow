@@ -1,4 +1,4 @@
-<!doctype html>
+<div>
 <html>
 
 <head>
@@ -10,10 +10,9 @@
 
 <body class="">
   <x-header.nav />
-  @forelse ($vehicles as $vehicle)
-
-  <div class="flex-col p-2 border-2">
-    <a href="{{route('vehicles.show', $vehicles)}}" >
+ @forelse ($this->vehicles as $vehicle)
+ <div class="flex-col p-2 border-2">
+    <a href="{{ route('vehicle.show', ['vehicle' => $vehicle->id]) }}">
     <p>{{$vehicle->name_vehicle}}</p>
     <p>{{$vehicle->price}}</p>
     <p>{{$vehicle->year}}</p>
@@ -21,11 +20,10 @@
 </a>
 
   </div>
-  @empty
-  <p>Não existe veiculos aqui</p>
-
-  @endforelse
+     
+ @empty
+     <p>nada aqui</p>
+ @endforelse
   
 </body>
-
-</html>
+</div>
