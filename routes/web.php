@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/home', [HomeController::class, 'index'])->name('home.index');
-Route::get('/home', [vehiclecontroller::class, 'index'])->name('home.index'); // deixar apenas com livewire padrao
+Route::get('/', Vehicle::class)->name('home.index');
 Route::get('/vehicles/{vehicle}', [vehiclecontroller::class, 'show'])->name('vehicle.show'); //e usar laravel padrao 
 
 // Route::get('/home', [Vehicle::class])->name('home.index');

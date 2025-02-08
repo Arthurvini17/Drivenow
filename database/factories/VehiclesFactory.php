@@ -21,7 +21,8 @@ class VehiclesFactory extends Factory
             'price' => fake()->numberBetween(50_000, 1_000_000_000),
             'year' => fake()->date(),
             'model' => fake()->userName(),
-            'marca' => fake()->lastName()
+            'marca' => fake()->lastName(),
+            'image' => 'https://avatar.iran.liara.run/public',
         ];
     }
 }

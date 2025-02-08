@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 
 class vehiclecontroller extends Controller
 {
-    public function index()
-    {
-        $vehicles = Vehicles::all();
-        return view('livewire.vehicle', ['vehicles' => $vehicles]);
-    }
+    // public function index()
+    // {
+    //     $vehicles = Vehicles::all();
+    //     return view('livewire.vehicle', ['vehicles' => $vehicles]);
+    // }
 
 
     public function show($id)
