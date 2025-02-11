@@ -1,16 +1,19 @@
-<header class="bg-[#EEDCC6]">
-    <nav class="flex items-center justify-between p-5 font-bold text-marrom font-poppins">
+<header class="bg-[#EEDCC6] w-full">
+    <nav class="flex items-center justify-between w-full p-5 font-bold text-marrom font-poppins">
         <div>DriveNow</div>
-        <ul class="flex gap-2">
-            @guest
-                <li><a href="">Login</a></li>
-                <li><a href="#">Registro</a></li>
-            @endguest
-            <li></li>
-            @auth
-                <p> Olá, {{ Auth::user()->name_funcionario }}</p>
-                <li><a href="#">Sair</a></li>
-            @endauth
-        </ul>
+        <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="ml-10 bg-marrom btn">Menu</div>
+            <ul tabindex="0" class="right-0 bg-white shadow-sm dropdown-content menu rounded-box w-52">
+                @auth
+                    <li><a>Meus itens</a></li>
+                    <li><a href="#">Sair</a></li>
+                @endauth
+
+                @guest
+                    <li><a>Criar Conta</a></li>
+                    <li><a href="#">Logar</a></li>
+                @endguest
+            </ul>
+        </div>
     </nav>
 </header>

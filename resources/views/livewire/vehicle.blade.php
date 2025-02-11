@@ -15,7 +15,7 @@
     <div class="p-2 bg-white rounded-md">
       <a href="{{ route('vehicle.show', ['vehicle' => $vehicle->id]) }}">
         <div class="flex justify-between">
-          <div class="flex flex-col gap-2 font-semibold border-2 text-start">
+          <div class="flex flex-col gap-2 font-semibold text-start">
             <h1 class="font-bold text-marrom">{{$vehicle->name_vehicle}}</h1>
             <p class="text-marrom">Preço: {{$vehicle->price}}</p>
             <p class="text-marrom">Ano lançamento: {{$vehicle->year}}</p>

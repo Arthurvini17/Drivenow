@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-marrom">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,11 @@
   <title>Document</title>
 </head>
 <body>
+  <x-header.nav />
+
   <div class="">
-  <p class="text-4xl">Marca do veiculo {{$vehicles->marca}}</p>
-  <p>Modelo do veiculo {{$vehicles->model}}</p>
-  <p>{{$vehicles->price}}</p>
+
+  
   </div>
 </body>
 </html>
