@@ -4,17 +4,19 @@ namespace App\Livewire;
 
 use App\Models\Vehicles;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Vehicle extends Component
 {
 
-    public $vehicles;
 
+    use WithPagination;
 
-
-    public function render(Vehicles $vehicles)
+    public function render()
     {
-        $this->vehicles = Vehicles::all();
+        // Aqui, $vehicles é uma variável local, não uma propriedade do componente.
+        $vehicles = Vehicles::paginate(5);
+
         return view('livewire.vehicle', ['vehicles' => $vehicles]);
     }
 

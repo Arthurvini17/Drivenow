@@ -1,5 +1,5 @@
 <header class="bg-[#EEDCC6]">
-    <nav class="flex items-center justify-between p-5 font-bold font-poppins">
+    <nav class="flex items-center justify-between p-5 font-bold text-marrom font-poppins">
         <div>DriveNow</div>
         <ul class="flex gap-2">
             @guest
