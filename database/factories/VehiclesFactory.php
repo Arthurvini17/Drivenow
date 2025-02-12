@@ -23,6 +23,7 @@ class VehiclesFactory extends Factory
             'model' => fake()->userName(),
             'marca' => fake()->lastName(),
             'image' => 'https://avatar.iran.liara.run/public',
+            'description' => fake()->realTextBetween(160, 200, 2),
         ];
     }
 }

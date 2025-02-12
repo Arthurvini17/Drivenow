@@ -9,9 +9,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                marrom: '#230c02',
-                cinzacolor: '#eedcc6',
-                brancocolor: '#fff5e9',
+                azul1: '#00BFFF',
+                azul2: '#87CEFA',
+                azul3: '#87CEEB',
+                fundobranco: '#FFFFFF',
+                fundoescuro: '#000000',
+                textobranco: 'FFFFFF',
+                textocinza: '#808080',
             },
         },
     },
