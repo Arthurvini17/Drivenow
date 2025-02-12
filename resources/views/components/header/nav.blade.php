@@ -9,10 +9,12 @@
                     <li><a href="#">Sair</a></li>
                 @endauth
                 @guest
-                    <li><a>Criar Conta</a></li>
+                    {{-- <li><a href="{{route('register.index')}}">Criar Conta</a></li> --}}
+                    <li><a href="/register" wire:navigate class="">Criar Conta</a></li>  {{--Redirecinando com livewire  --}}
                     <li><a href="#">Logar</a></li>
                 @endguest
+                wire:c
             </ul>
-        </div>
+        </div> 
     </nav>
 </header>
