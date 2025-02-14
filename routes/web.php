@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\vehiclecontroller;
 use App\Livewire\Counter;
@@ -13,6 +14,13 @@ Route::get('/vehicles/{vehicle}', [vehiclecontroller::class, 'show'])->name('veh
 
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::post('/register', [RegisterController::class, 'store'])->name
+('register.store');
+
+//rota de login
+Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login.store');
+
 
 

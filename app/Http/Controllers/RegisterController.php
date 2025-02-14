@@ -7,17 +7,19 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('autentication.register');
     }
 
-    public function store(Request $request ) {
+    public function store(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
-            'email' => ['email', 'unique'],
+            'email' => ['email', 'unique:email'],
             'password' => ['required', 'min:8'],
-        ],[
-            
+        ], [
+
             'name.required' => 'Esse campo precisa ser preenchido com seu nome',
             'email.unique' => 'Esse Email ja esta cadastrado',
             'email.email' => 'Esse campo precisa ser preenchido com seu email',

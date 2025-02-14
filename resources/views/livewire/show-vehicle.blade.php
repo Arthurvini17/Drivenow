@@ -35,7 +35,7 @@
               <span>BR</span>
             </label>
           </div>
-          <button class="w-full mt-1 font-semibold text-white bg-azul1 btn hover:bg-slate-800 ">Enviar Proposta</button>
+          <button class="w-full mt-2 font-semibold text-white bg-azul1 btn hover:bg-slate-800 ">Enviar Proposta</button>
         </form>
       </div>
     </div>
