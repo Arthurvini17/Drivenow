@@ -19,7 +19,7 @@ class VehiclesFactory extends Factory
         return [
             'name_vehicle' => fake()->name(),
             'price' => fake()->numberBetween(50_000, 1_000_000_000),
-            'year' => fake()->date(),
+            'year' => fake()->year(),
             'model' => fake()->userName(),
             'marca' => fake()->lastName(),
             'image' => 'https://avatar.iran.liara.run/public',

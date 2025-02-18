@@ -15,6 +15,8 @@
                     <li><a href="#">Logar</a></li>
                 @endguest
             </ul>
-        </div> 
+        </div>
+        
+        
     </nav>
 </header>

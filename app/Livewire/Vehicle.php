@@ -9,15 +9,16 @@ use Livewire\WithPagination;
 class Vehicle extends Component
 {
 
+    //inicia a variavel search
+
+    public $search = '';
 
     use WithPagination;
 
-    public function render()
+      public function render()
     {
-        // Aqui, $vehicles é uma variável local, não uma propriedade do componente.
-        $vehicles = Vehicles::paginate(5);
-
-        return view('livewire.vehicle', ['vehicles' => $vehicles]);
+        return view('livewire.vehicle', ['vehicles' => Vehicles::where('name_vehicle', 'like', '%' .  $this->search . '%')->paginate(10)
+    ]);
     }
 
 

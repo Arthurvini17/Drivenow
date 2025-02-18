@@ -10,6 +10,17 @@
 <body class="">
   <x-header.nav />
 
+
+  <div>
+    <input type="text" wire:model.live="search">
+ 
+    <ul>
+        @foreach ($vehicles as $vehicle)
+           
+        @endforeach
+    </ul>
+</div>
+
   @forelse ($vehicles as $vehicle)
   <div class="flex-col p-7 bg-cinza">
     <div class="p-2 bg-white rounded-md">
@@ -25,7 +36,7 @@
       </a>
     </div>
   </div>
-  
+
   @empty
   <p>nada aqui</p>
   @endforelse
