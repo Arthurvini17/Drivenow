@@ -5,7 +5,6 @@
             <div tabindex="0" role="button" class="ml-10 font-bold text-azul1 bg-slate-800 btn">Menu</div>
             <ul tabindex="0" class="right-0 font-bold bg-white shadow-sm text-fundoescuro dropdown-content menu rounded-box w-52">
                 @auth
-
                     <li><a>Meus anuncios</a></li>
                     <li><a href="#">Sair</a></li>
                 @endauth
