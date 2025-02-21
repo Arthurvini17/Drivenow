@@ -15,12 +15,12 @@ Route::get('/vehicles/{vehicle}', [vehiclecontroller::class, 'show'])->name('veh
 
 //Rota de criar conta
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
-
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+
+Route::get('/create/vehicle', [vehiclecontroller::class, 'create'])->name('vehicle.create');
+
 
 //rota de login
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.store');
-
-
-

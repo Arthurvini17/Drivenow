@@ -17,7 +17,6 @@ class VehiclesFactory extends Factory
     public function definition(): array
     {
         return [
-            'name_vehicle' => fake()->name(),
             'price' => fake()->numberBetween(50_000, 1_000_000_000),
             'year' => fake()->year(),
             'model' => fake()->userName(),

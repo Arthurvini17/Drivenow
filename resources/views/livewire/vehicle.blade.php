@@ -27,7 +27,7 @@
         <a href="{{ route('vehicle.show', ['vehicle' => $vehicle->id]) }}">
           <div class="flex justify-between">
             <div class="flex flex-col gap-2 font-semibold text-start">
-              <h1 class="font-bold text-fundoescuro">{{$vehicle->name_vehicle}}</h1>
+              <h1 class="font-bold text-fundoescuro">{{$vehicle->model}}</h1>
               <h1 class="font-semibold text-black">
                 Preço: <span class="text-black">{{ number_format($vehicle->price, 2, ',', '.') }}</span></h1>
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
