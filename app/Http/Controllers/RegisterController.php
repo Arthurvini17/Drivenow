@@ -19,7 +19,6 @@ class RegisterController extends Controller
             'email' => ['email', 'unique:users,email'],
             'password' => ['required', 'min:8'],
         ], [
-
             'name.required' => 'Esse campo precisa ser preenchido com seu nome',
             'email.unique' => 'Esse Email ja esta cadastrado',
             'email.email' => 'Esse campo precisa ser preenchido com seu email',

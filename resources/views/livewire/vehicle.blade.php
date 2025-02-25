@@ -32,7 +32,7 @@
                 Preço: <span class="text-black">{{ number_format($vehicle->price, 2, ',', '.') }}</span></h1>
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
             </div>
-            <img src="{{$vehicle->image}}" class="self-end w-20 h-20 mb-2 mr-2">
+            <img src="{{$vehicle->image}}" class="self-end w-20 h-20 mb-2 mr-2 rounded-md">
           </div>
         </a>
       </div>

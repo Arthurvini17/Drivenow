@@ -23,11 +23,14 @@
         <p class="text-xl ">{{$vehicles->description}}</p>
         <p class="mb-2 text-2xl font-semibold">
           R$: <span class="text-azul1">{{ number_format($vehicles->price, 2, ',', '.') }}</span></p>
-        <form action="" class="flex flex-col justify-center w-full" method="post" >
+        <form action="" class="flex flex-col justify-center w-full" method="post">
           <div class=" form-control">
-            <label class=" label">
-              <span class="label-text">Valor da Proposta</span>
-            </label>
+            <div>
+              <label class="label">
+                <span class="label-text">Valor da Proposta</span>
+              </label>
+              <h3>Anunciante: {{$vehicles->user->name}}</h3>
+            </div>
             <label class=" input-group">
               <span class="font-bold ">Preço</span>
               <input type="text" placeholder="{{ number_format($vehicles->price, 2, ',', '.') }}"
@@ -35,6 +38,8 @@
               <span>BR</span>
             </label>
           </div>
+
+
           <button class="w-full mt-2 font-semibold text-white bg-azul1 btn hover:bg-slate-800 ">Enviar Proposta</button>
         </form>
       </div>

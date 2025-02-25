@@ -18,30 +18,42 @@
         <form action="" method="post" class="text-center ">
             <div class="grid items-center justify-center grid-cols-2 gap-2 text-center ">
                 <div class="w-full">
-                    <label for="">Modelo do veiuclo</label>
-                    <input class="w-full " type="text" name="model" placeholder="Digite o modelo do seu veiculo">
+                    <label for="">Modelo do veiculo</label>
+                    <input
+                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none"
+                        type="text" name="model" placeholder="Digite o modelo do seu veiculo">
                 </div>
 
                 <div class="w-full">
                     <label for="">Marca do veiculo</label>
-                    <input type="text" class="w-full truncate rounded-md" name="marca"
-                        placeholder="Marca do seu veiculo">
+                    <input type="text"
+                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none "
+                        name="marca" placeholder="Marca do seu veiculo">
                 </div>
 
                 <div class="w-full">
                     <label for="year">Ano do veiculo</label>
-                    <input type="date" class="w-full rounded-md" name="year">
+                    <input type="date"
+                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 placeholder:bg-slate- focus:border-azul1 focus:outline-none "
+                        name="year">
                 </div>
 
                 <div class="w-full">
                     <label for="price">Preço do veiculo</label>
-                    <input type="number" class="w-full rounded-md" placeholder="Digite o preço do veiculo">
+                    <input type="number"
+                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none "
+                        placeholder="Digite o preço do veiculo">
                 </div>
 
                 <div class="grid col-span-2 ">
                     <label for="description">Descrição do veiculo</label>
-                    <textarea name="description" id="" cols="30" rows="2" placeholder="Fale sobre o veiculo"></textarea>
+                    <textarea name="description" id="" cols="30" rows="2" placeholder="Fale sobre o veiculo"
+                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none"></textarea>
                 </div>
+            </div>
+
+            <div class="mt-2">
+                <button class="px-2 py-2 font-semibold rounded-md bg-azul1 ">Criar Anuncio</button>
             </div>
         </form>
     </div>

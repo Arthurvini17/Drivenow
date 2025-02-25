@@ -18,7 +18,7 @@ class Vehicle extends Component
   public function render()
   {
     return view('livewire.vehicle', [
-      'vehicles' => Vehicles::where('model', 'like', '%' .  $this->search . '%')->paginate(10)
+      'vehicles' => Vehicles::where('model', 'like', '%' .  $this->search . '%')->paginate(4)
     ]);
   }
 
