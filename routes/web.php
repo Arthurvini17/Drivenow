@@ -20,6 +20,9 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 
 Route::get('/create/vehicle', [vehiclecontroller::class, 'create'])->name('vehicle.create');
 
+// Route::post('/create/vehicle', [Vehicle::class])->name('vehicle.create');
+// Route::post('/create/vehicle', [vehiclecontroller::class, 'store_vehicle'])->name('store_vehicle');
+
 
 //rota de login
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');

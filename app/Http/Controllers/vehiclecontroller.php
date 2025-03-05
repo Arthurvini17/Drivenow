@@ -15,6 +15,9 @@ class vehiclecontroller extends Controller
     // }
 
 
+
+
+
     public function show($id)
     {
         $vehicles = Vehicles::find($id);
@@ -24,6 +27,6 @@ class vehiclecontroller extends Controller
 
     public function create()
     {
-        return view('create_vehicle');
+        return view('livewire.create_vehicle');
     }
 }

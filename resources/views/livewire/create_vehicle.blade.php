@@ -13,15 +13,19 @@
 <body class="flex items-center justify-center min-h-screen p-2 text-white ">
     <div class="flex flex-col ">
         <div class="text-center">
-            <h1 class="text-xl text-white">Crie seu anuncio</h1>
+            <h1 class="mb-4 text-3xl font-semibold text-white ">Crie seu anuncio</h1>
         </div>
-        <form action="" method="post" class="text-center ">
+        <form wire:submit.prevent='store_vehicle' class="text-center ">
+            @csrf
             <div class="grid items-center justify-center grid-cols-2 gap-2 text-center ">
                 <div class="w-full">
                     <label for="">Modelo do veiculo</label>
                     <input
                         class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none"
-                        type="text" name="model" placeholder="Digite o modelo do seu veiculo">
+                        type="text" wire:model='model' placeholder="Digite o modelo do seu veiculo">
+                    @error('model')
+                    <span>{{ $message }}</span>
+                    @enderror
                 </div>
 
                 <div class="w-full">
@@ -53,7 +57,7 @@
             </div>
 
             <div class="mt-2">
-                <button class="px-2 py-2 font-semibold rounded-md bg-azul1 ">Criar Anuncio</button>
+                <button class="px-2 py-2 font-semibold rounded-md bg-azul1 " type="submit">Criar Anuncio</button>
             </div>
         </form>
     </div>
