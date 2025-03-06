@@ -12,7 +12,7 @@
                 @guest
                 {{-- <li><a href="{{route('register.index')}}">Criar Conta</a></li> --}}
                 <li><a href="/register" wire:navigate class="">Criar Conta</a></li> {{--Redirecinando com livewire --}}
-                <li><a href="#">Logar</a></li>
+                <li><a href="/login" wire:navigate>Logar</a></li>
                 @endguest
             </ul>
         </div>

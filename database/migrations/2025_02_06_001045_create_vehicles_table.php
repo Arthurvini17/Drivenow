@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->string('marca');
-            $table->float('price');
-            $table->year('year');
+            $table->decimal('price', 14, 4);
+            $table->date('year');
             $table->string('model');
             $table->timestamps();
         });

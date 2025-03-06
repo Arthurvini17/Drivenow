@@ -5,11 +5,15 @@ namespace App\Livewire;
 use App\Models\Vehicles;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateVehicle extends Component
 {
+    use WithFileUploads;
 
 
+    #[Validate('required', message: 'Coloque uma imagens do seu veiculo')]
+    public $image = '';
 
     #[Validate('required', message: 'Coloque o modelo do seu veiculo')]
     public $model = '';
@@ -32,8 +36,21 @@ class CreateVehicle extends Component
 
     public function store_vehicle()
     {
-        $validated = $this->validate();
-        Vehicles::create($validated);
+        $imagePath = $this->image->store('images', 'public');
+
+        $this->validate();
+
+
+        auth()->user()->vehicles()->create([
+            'image' => $this->$imagePath,
+            'year' => $this->year,
+            'marca' => $this->marca,
+            'price' => $this->price,
+            'description' => $this->description,
+            'model' => $this->model,
+        ]);
+
+        return redirect()->route('home.index');
     }
 
 

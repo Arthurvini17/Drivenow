@@ -9,8 +9,10 @@ class Vehicles extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['image', 'marca', 'model', 'description', 'year', 'price'];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(user::class);
     }
 }
