@@ -11,14 +11,15 @@ class Vehicle extends Component
 {
 
   //inicia a variavel search
-
   public $search = '';
 
 
   public function render()
   {
     return view('livewire.vehicle', [
-      'vehicles' => Vehicles::where('model', 'like', '%' .  $this->search . '%')->latest()->paginate(4)
+      'vehicles' => Vehicles::where('model', 'like', '%' .  $this->search . '%')
+        ->orWhere('marca', 'like', '%' . $this->search . '%')
+        ->latest()->paginate(4)
     ]);
   }
 

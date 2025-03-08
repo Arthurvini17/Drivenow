@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Container\Attributes\Auth;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
 
@@ -27,10 +29,17 @@ class LoginController extends Controller
             'password.min' => 'Sua senha tem que ter no minimo :min digitos'
         ]);
 
-        if (FacadesAuth::attempt($data)) {
-            $request->session()->regenerate();
+        // if (FacadesAuth::attempt($data)) {
+        //     $request->session()->regenerate();
 
-            return redirect()->intended('/');
+        //autenticando apenas com email e senha
+        if (Auth::attempt([
+            'email' => $data['email'],
+            'password' => $data['password']
+        ])) {
+            $request->session()->regenerate();
+            return redirect()->route('home.index');
         }
+        return back()->withErrors(['email' => 'As credenciais fornecidas não correspondem aos nossos registros.']);
     }
 }

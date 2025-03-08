@@ -11,14 +11,9 @@
   <body class="">
     <x-header.nav />
 
-
     <div class="flex items-center justify-center mt-2">
       <input type="text" class="p-1 font-semibold text-black bg-white border rounded-md placeholder: "
         wire:model.live="search" placeholder="Pesquisar...">
-      <ul>
-        @foreach ($vehicles as $vehicle)
-        @endforeach
-      </ul>
     </div>
 
     @forelse ($vehicles as $vehicle)
@@ -39,7 +34,7 @@
     </div>
 
     @empty
-    <p>Não encontramos nada correspondente com isso: {{$search}}</p>
+    <p class="text-center">Ainda não temos itens disponiveis ainda</p>
     @endforelse
 
     <div class="flex items-center justify-center">

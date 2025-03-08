@@ -18,7 +18,7 @@ Route::get('/vehicles/{vehicle}', [vehiclecontroller::class, 'show'])->name('veh
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create');
+Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create')->middleware('auth');
 
 // Route::post('/create/vehicle', [Vehicle::class])->name('vehicle.create');
 // Route::post('/create/vehicle', [vehiclecontroller::class, 'store_vehicle'])->name('store_vehicle');

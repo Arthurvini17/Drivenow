@@ -36,15 +36,12 @@ class CreateVehicle extends Component
 
     public function store_vehicle()
     {
-
-
         //salvando a imagem na pasta public 
         if ($this->image) {
             $imagePath = $this->image->store('images', 'public');
 
             $validated['image'] = $imagePath;
         }
-
 
         //valida os dados de acordo com os validates passado
         $validated = $this->validate();
