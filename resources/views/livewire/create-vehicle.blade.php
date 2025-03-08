@@ -43,7 +43,7 @@
                         <label for="price">Preço do veiculo</label>
                         <input type="number" wire:model='price'
                             class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white "
-                            placeholder="Digite o preço do veiculo">
+                            placeholder="Preço do veiculo">
                         @error('price')
                         <span>{{ $message }}</span>
                         @enderror
