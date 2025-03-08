@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('marca');
             $table->decimal('price', 14, 4);
-            $table->date('year');
+            $table->year('year');
             $table->string('model');
             $table->timestamps();
         });
