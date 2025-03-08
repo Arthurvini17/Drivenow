@@ -32,14 +32,16 @@ class LoginController extends Controller
         // if (FacadesAuth::attempt($data)) {
         //     $request->session()->regenerate();
 
+        $remember = $request->has('remember');
         //autenticando apenas com email e senha
         if (Auth::attempt([
             'email' => $data['email'],
             'password' => $data['password']
-        ])) {
+        ], $remember)) {
             $request->session()->regenerate();
             return redirect()->route('home.index');
         }
+
         return back()->withErrors(['email' => 'As credenciais fornecidas não correspondem aos nossos registros.']);
     }
 
