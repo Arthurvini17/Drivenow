@@ -15,7 +15,7 @@
                     <label for="">Modelo do veiculo</label>
                     <input
                         class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white"
-                        type="text" wire:model='model' placeholder="Digite o modelo do seu veiculo">
+                        type="text" wire:model='model' placeholder="Modelo do veiculo">
                     @error('model')
                     <span>{{ $message }}</span>
                     @enderror
@@ -33,9 +33,9 @@
 
                 <div class="w-full">
                     <label for="year">Ano do veiculo</label>
-                    <input type="date"
+                    <input type="number"
                         class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 placeholder:bg-slate- focus:border-azul1 focus:outline-none placeholder:text-white"
-                        wire:model='year'>
+                        wire:model='year' min="1900" max="{{ date('Y') }} required" placeholder="Ano do veiculo">
                     @error('year')
                     <span>{{ $message }}</span>
                     @enderror
