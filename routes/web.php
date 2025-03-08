@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\vehiclecontroller;
 use App\Livewire\Counter;
 use App\Livewire\CreateVehicle;
+use App\Livewire\DashboardVehicles;
 use App\Livewire\Vehicle;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,8 @@ Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create')->mid
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.store');
+
+
+//rota de dashboard 
+
+Route::get('/dashboard', DashboardVehicles::class)->name('dashboard');
