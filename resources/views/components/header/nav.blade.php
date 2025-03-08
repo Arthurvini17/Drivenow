@@ -6,8 +6,9 @@
             <ul tabindex="0"
                 class="right-0 font-bold bg-white shadow-sm text-fundoescuro dropdown-content menu rounded-box w-52">
                 @auth
+                <li><a href="{{ route('vehicle.create') }}">Anunciar Veiculo</a></li>
                 <li><a>Meus anuncios</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a href="{{ route('logout') }}">Sair</a></li>
                 @endauth
                 @guest
                 {{-- <li><a href="{{route('register.index')}}">Criar Conta</a></li> --}}

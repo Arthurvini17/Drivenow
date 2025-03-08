@@ -42,4 +42,10 @@ class LoginController extends Controller
         }
         return back()->withErrors(['email' => 'As credenciais fornecidas não correspondem aos nossos registros.']);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
 }
