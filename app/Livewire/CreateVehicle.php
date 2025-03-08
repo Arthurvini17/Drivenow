@@ -36,13 +36,22 @@ class CreateVehicle extends Component
 
     public function store_vehicle()
     {
-        $imagePath = $this->image->store('images', 'public');
-
-        $this->validate();
 
 
+        //salvando a imagem na pasta public 
+        if ($this->image) {
+            $imagePath = $this->image->store('images', 'public');
+
+            $validated['image'] = $imagePath;
+        }
+
+
+        //valida os dados de acordo com os validates passado
+        $validated = $this->validate();
+
+        //criaçaõ do veiculo apenas com usuarios logados
         auth()->user()->vehicles()->create([
-            'image' => $this->$imagePath,
+            'image' => $imagePath,
             'year' => $this->year,
             'marca' => $this->marca,
             'price' => $this->price,

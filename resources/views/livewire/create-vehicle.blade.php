@@ -6,7 +6,7 @@
             <div class="text-center">
                 <h1 class="mb-4 text-3xl font-semibold text-white ">Crie seu anuncio</h1>
             </div>
-            <form wire:submit.prevent='store_vehicle' class="text-center">
+            <form wire:submit.prevent='store_vehicle' class="text-center " enctype="multipart/form-data">
                 @csrf
                 <div class="grid items-center justify-center grid-cols-2 gap-2 text-center ">
                     <div class="w-full">
@@ -23,7 +23,7 @@
                         <label for="">Marca do veiculo</label>
                         <input wire:model='marca'
                             class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white "
-                            name="marca" placeholder="Marca do seu veiculo">
+                            placeholder="Marca do seu veiculo">
                         @error('marca')
                         <span class="">{{ $message }}</span>
                         @enderror
@@ -63,7 +63,6 @@
                     <div>
                         <input type="file" wire:model='image'>
                         @error('image') <span>{{$message}}</span>
-
                         @enderror
                     </div>
 
