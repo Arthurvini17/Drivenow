@@ -1,4 +1,7 @@
 <div>
+
+    <x-header.nav />
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <table class="w-full table-auto">
