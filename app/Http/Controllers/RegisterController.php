@@ -33,6 +33,6 @@ class RegisterController extends Controller
         ]);
 
 
-        return redirect()->route('home.index');
+        return redirect()->route('login.index');
     }
 }
