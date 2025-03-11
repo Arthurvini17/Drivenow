@@ -14,7 +14,7 @@
 <body>
   <div class="">
     <div class="flex items-center self-center justify-center ">
-      <img src="{{ Storage::url($vehicles->image) }}" class="" alt="">
+      <img src="{{ asset('storage/' . $vehicles->image) }}" class="" alt="">
     </div>
     <div class="text-white rounded-tl-md rounded-tr-md bg-slate-800">
 
