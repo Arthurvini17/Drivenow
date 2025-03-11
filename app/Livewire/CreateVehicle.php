@@ -12,7 +12,7 @@ class CreateVehicle extends Component
     use WithFileUploads;
 
 
-    #[Validate('required', message: 'Coloque uma imagens do seu veiculo')]
+    #[Validate('required', message: 'Coloque uma imagen do seu veiculo')]
     public $image = '';
 
     #[Validate('required', message: 'Coloque o modelo do seu veiculo')]
