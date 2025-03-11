@@ -33,7 +33,6 @@
         </a>
       </div>
     </div>
-    <p>{{ Storage::url($vehicle->image) }}</p>
 
     @empty
     <p class="text-center">Ainda não temos itens disponiveis ainda</p>

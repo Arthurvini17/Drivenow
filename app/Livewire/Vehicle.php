@@ -16,10 +16,15 @@ class Vehicle extends Component
 
   public function render()
   {
+    $vehicles = Vehicles::where('model', 'like', '%' .  $this->search . '%')
+      ->orWhere('marca', 'like', '%' . $this->search . '%')
+      ->latest()
+      ->paginate(4);
+
+    dd(Storage::url($vehicles->first()->image));
+
     return view('livewire.vehicle', [
-      'vehicles' => Vehicles::where('model', 'like', '%' .  $this->search . '%')
-        ->orWhere('marca', 'like', '%' . $this->search . '%')
-        ->latest()->paginate(4)
+      'vehicles' => $vehicles
     ]);
   }
 
