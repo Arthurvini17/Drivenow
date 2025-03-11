@@ -21,7 +21,7 @@ class Vehicle extends Component
       ->latest()
       ->paginate(4);
 
-    dd(Storage::url($vehicles->first()->image));
+
 
     return view('livewire.vehicle', [
       'vehicles' => $vehicles
