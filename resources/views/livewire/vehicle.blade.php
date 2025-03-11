@@ -28,10 +28,12 @@
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
             </div>
             <img src="{{ Storage::url($vehicle->image) }}" class="w-30" alt="testando">
+
           </div>
         </a>
       </div>
     </div>
+    <p>{{ Storage::url($vehicle->image) }}</p>
 
     @empty
     <p class="text-center">Ainda não temos itens disponiveis ainda</p>
