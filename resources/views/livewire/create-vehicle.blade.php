@@ -8,7 +8,7 @@
         <div class="text-center">
             <h1 class="mb-4 text-3xl font-semibold text-white ">Crie seu anuncio</h1>
         </div>
-        <form wire:submit.prevent='store_vehicle' class="text-center ">
+        <form wire:submit.prevent='store_vehicle' class="text-center " enctype="multipart/form-data">
             @csrf
             <div class="grid items-center justify-center grid-cols-2 gap-2 text-center ">
                 <div class="w-full">
