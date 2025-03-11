@@ -27,8 +27,7 @@
                 Preço: <span class="text-black">{{ number_format($vehicle->price, 2, ',', '.') }}</span></h1>
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
             </div>
-            <img src="{{ Storage::url($vehicles->image) }}" class="w-30" alt="">
-
+            <img src="{{ asset('storage/' . $vehicle->image) }}" class="w-20 h-20 rounded-md">
           </div>
         </a>
       </div>
