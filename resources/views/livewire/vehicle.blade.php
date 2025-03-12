@@ -20,19 +20,20 @@
     <div class="flex-col p-7 bg-cinza">
       <div class="p-2 bg-white rounded-md">
         <a href="{{ route('vehicle.show', ['vehicle' => $vehicle->id]) }}">
-          <div class="flex justify-between">
-            <div class="flex flex-col gap-2 font-semibold text-start">
+          <div class="flex justify-between items-center w-full">
+            <div class="flex flex-col gap-2 font-semibold text-start max-w-[60%]">
               <h1 class="font-bold text-fundoescuro">{{$vehicle->model}}</h1>
               <h1 class="font-semibold text-black">
-                Preço: <span class="text-black">{{ number_format($vehicle->price, 2, ',', '.') }}</span></h1>
+                Preço: <span class="text-black">{{ number_format($vehicle->price, 2, ',', '.') }}</span>
+              </h1>
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
             </div>
-            <img src="{{ Storage::url($vehicle->image) }}" class="w-30" alt="testando">
-
+            <img src="{{ asset('storage/' . $vehicle->image) }}" class="w-32 h-32 object-cover rounded-md" alt="">
           </div>
         </a>
       </div>
     </div>
+
 
     @empty
     <p class="text-center">Ainda não temos itens disponiveis ainda</p>
