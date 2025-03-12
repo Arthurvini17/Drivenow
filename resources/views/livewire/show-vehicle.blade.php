@@ -14,7 +14,7 @@
 <body class="min-h-screen bg-slate-800">
   <div class="">
     <div class="flex flex-col items-center justify-center ">
-      <img src="{{ Storage::url($vehicles->image) }}" class="w-30" alt="">
+      <img src="{{ Storage::url($vehicles->image) }}" class="mt-10 w-30" alt="">
     </div>
     <div class="text-white rounded-tl-md rounded-tr-md">
 
