@@ -13,12 +13,15 @@ class CreateVehicle extends Component
 
 
     #[Validate('required', message: 'Coloque uma imagen do seu veiculo')]
+
     public $image = '';
 
     #[Validate('required', message: 'Coloque o modelo do seu veiculo')]
+    #[Validate('max:50', message: 'Texto maior que o permitido')]
     public $model = '';
 
     #[Validate('required', message: 'Coloque a marca do veiculo')]
+    #[Validate('max:50', message: 'Texto maior que o permitido')]
     public $marca = '';
 
     #[Validate('required', message: 'Preencha com o ano do veiculo')]
@@ -28,6 +31,8 @@ class CreateVehicle extends Component
     public $price = '';
 
     #[Validate('required', message: 'Coloque uma descrição para seu veiculo. Ex: avarias detalhes etc...')]
+    #[Validate('max:300', message: 'Maximo de caracteres permitido: :max')]
+
     public $description;
 
 
