@@ -14,57 +14,57 @@
                 <div class="w-full">
                     <label for="">Modelo do veiculo</label>
                     <input
-                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white"
+                        class="w-full px-2 py-2 truncate bg-transparent border-2 input input-bordered placeholder:text-white focus-visible:border-azul1 "
                         type="text" wire:model='model' placeholder="Modelo do veiculo">
                     @error('model')
-                    <span>{{ $message }}</span>
+                    <span class="animate-pulse">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="w-full">
                     <label for="">Marca do veiculo</label>
                     <input wire:model='marca'
-                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white "
+                        class="w-full px-2 py-2 truncate bg-transparent border-2 rounded-md input input-bordered placeholder:text-white focus-visible:border-azul1 "
                         placeholder="Marca do veiculo">
                     @error('marca')
-                    <span class="">{{ $message }}</span>
+                    <span class="animate-pulse">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="w-full">
                     <label for="year">Ano do veiculo</label>
                     <input type="number"
-                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 placeholder:bg-slate- focus:border-azul1 focus:outline-none placeholder:text-white"
+                        class="w-full px-2 py-2 truncate bg-transparent border-2 rounded-md input input-bordered placeholder:text-white focus-visible:border-azul1"
                         wire:model='year' min="1900" max="{{ date('Y') }} required" placeholder="Ano do veiculo">
                     @error('year')
-                    <span>{{ $message }}</span>
+                    <span class="animate-pulse">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="w-full">
                     <label for="price">Preço do veiculo</label>
                     <input type="number" wire:model='price'
-                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white "
+                        class="w-full px-2 py-2 truncate bg-transparent border-2 rounded-md input input-bordered placeholder:text-white focus-visible:border-azul1 "
                         placeholder="Preço do veiculo">
                     @error('price')
-                    <span>{{ $message }}</span>
+                    <span class="animate-pulse">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="grid col-span-2 ">
                     <label for="description">Descrição do veiculo</label>
                     <textarea name="description" id="" cols="30" rows="2" placeholder="Fale sobre o veiculo"
-                        class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white"
+                        class="w-full px-2 py-2 truncate bg-transparent border-2 rounded-md input input-bordered focus-visible:border-azul1 placeholder:text-white"
                         wire:model='description'></textarea>
                     @error('description')
-                    <span>{{ $message }}</span>
+                    <span class="animate-pulse">{{ $message }}</span>
                     @enderror
                 </div>
 
 
                 <div>
                     <input type="file" wire:model='image'>
-                    @error('image') <span>{{$message}}</span>
+                    @error('image') <span class="animate-pulse">{{$message}}</span>
                     @enderror
                 </div>
 

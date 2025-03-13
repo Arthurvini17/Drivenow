@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="w-full mt-2 text-center">
-                    <button class="w-full text-white shadow-sm bg-azul1 btn shadow-white">Login</button>
+                    <button class="w-full text-xl text-white shadow-sm bg-azul1 btn shadow-white">Login</button>
                 </div>
 
                 <div>
