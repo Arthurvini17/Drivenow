@@ -10,7 +10,7 @@
         </div>
         <form wire:submit.prevent='store_vehicle' class="text-center " enctype="multipart/form-data">
             @csrf
-            <div class="grid items-center justify-center grid-cols-2 gap-2 text-center ">
+            <div class="grid items-center justify-center grid-cols-2 gap-2 p-5 text-center ">
                 <div class="w-full">
                     <label for="">Modelo do veiculo</label>
                     <input
@@ -25,7 +25,7 @@
                     <label for="">Marca do veiculo</label>
                     <input wire:model='marca'
                         class="w-full px-2 py-2 truncate bg-transparent border rounded-md border-azul1 focus:border-azul1 focus:outline-none placeholder:text-white "
-                        placeholder="Marca do seu veiculo">
+                        placeholder="Marca do veiculo">
                     @error('marca')
                     <span class="">{{ $message }}</span>
                     @enderror
