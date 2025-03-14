@@ -21,8 +21,6 @@ class Vehicle extends Component
       ->latest()
       ->paginate(4);
 
-
-
     return view('livewire.vehicle', [
       'vehicles' => $vehicles
     ]);
