@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', Vehicle::class)->name('home.index'); //Rota livewire
 Route::get('/vehicles/{vehicle}', [vehiclecontroller::class, 'show'])->name('vehicle.show'); //e usar laravel padrao  //Setar middleware para acessar apenas logado
 
-
 //Rota de criar conta
-Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::controller(RegisterController::class)->group(function () {
+    Route::get('/register', 'index')->name('register.index');
+    Route::post('/register', 'store')->name('register.store');
+});
+
+
 
 Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create')->middleware('auth');
 
@@ -26,9 +30,12 @@ Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create')->mid
 
 
 //rota de login
-Route::get('/login', [LoginController::class, 'index'])->name('login.index');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.store');
+
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('name.logout');
+    Route::post('/login', [LoginController::class, 'autenticate'])->name('login.store');
+});
 
 
 //rota de dashboard 

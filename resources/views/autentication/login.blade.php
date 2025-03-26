@@ -75,10 +75,6 @@
                         <input type="checkbox" name="remember" checked="checked" class="checkbox" id="remember">
                         Lembrar-me
                     </label>
-
-
-
-
                 </div>
 
                 <div class="self-center ">
