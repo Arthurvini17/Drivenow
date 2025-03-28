@@ -33,8 +33,8 @@ Route::get('/create/vehicle', CreateVehicle::class)->name('vehicle.create')->mid
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('login.index');
-    Route::get('/logout', [LoginController::class, 'logout'])->name('name.logout');
-    Route::post('/login', [LoginController::class, 'autenticate'])->name('login.store');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::post('/login', [LoginController::class, 'authenticate'])->name('login.store');
 });
 
 
