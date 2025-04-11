@@ -43,7 +43,7 @@ class CreateVehicle extends Component
     {
         //salvando a imagem na pasta public 
         if ($this->image) {
-            $imagePath = $this->image->store('images', 'public');
+            $imagePath = $this->image->store('images', 'r2');
 
             $validated['image'] = $imagePath;
         }
