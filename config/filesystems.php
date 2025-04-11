@@ -41,7 +41,18 @@ return [
             'visibility' => 'public',
         ],
 
+        'drivenow' => [
 
+        'driver' => 's3',
+        'key' => env('LARAVEL_CLOUD_ACCESS_KEY'),
+        'secret' => env('LARAVEL_CLOUD_SECRET'),
+        'region' => env('LARAVEL_CLOUD_REGION'),
+        'bucket' => env('LARAVEL_CLOUD_BUCKET'),
+        'url' => env('LARAVEL_CLOUD_URL'),
+        'endpoint' => env('LARAVEL_CLOUD_ENDPOINT'),
+        'visibility' => 'public',
+
+        ],
 
 
 

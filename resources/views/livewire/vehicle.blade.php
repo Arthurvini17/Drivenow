@@ -27,7 +27,7 @@
               </h1>
               <p class="text-fundoescuro">Ano lançamento: {{$vehicle->year}}</p>
             </div>
-            <img src="{{ asset('storage/' . $vehicle->image) }}" class="object-cover w-32 h-32 rounded-md" alt="">
+            <img src="{{ Storage::disk('vehicles')->url($vehicle->image) }}" class="object-cover w-32 h-32 rounded-md" alt="">
           </div>
         </a>
       </div>
